@@ -89,6 +89,11 @@ Tela Inicial ✔️
 
 ![image](https://user-images.githubusercontent.com/81394880/112732291-cd850a00-8f17-11eb-9105-b309c1a01890.png)
 
+Página de Jogos Ao Vivo ✔️
+
+![image](https://user-images.githubusercontent.com/81394880/112732335-150b9600-8f18-11eb-9bb2-ed05399a6514.png)
+
+
 
 
 
