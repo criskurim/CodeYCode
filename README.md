@@ -1,5 +1,5 @@
-# Assistente Virtual - IBet
-Desenvolvido para ser uma assistente virtual de Esporte, com o  intuito de facilitar a vida do usuário que ama esporte, optamos em criar a IBet, para facilitar a vida de milhares de torcedores.
+# Assistente Virtual - IBET
+Desenvolvido para ser uma assistente virtual de Esporte, com o  intuito de facilitar a vida do usuário que ama esporte, optamos em criar a **IBET**, para facilitar a vida de milhares de torcedores.
 
 ## Equipe CodeYCode
 * Andrew Augusto Dias Santos. [GitHub](https://github.com/AndrewAugusto)
