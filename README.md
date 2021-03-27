@@ -2,7 +2,7 @@
 Desenvolvido para ser uma assistente virtual de Esporte, com o  intuito de facilitar a vida do usuário que ama esporte, optamos em criar a **IBET**, para facilitar a vida de milhares de torcedores.
 
 <p align="center">
-<img src="https://github.com/criskurim/CodeYCode/blob/main/logo.jpg" width="250px" >
+<img src="https://github.com/criskurim/CodeYCode/blob/main/logo.jpg" width="150px" >
 </p>
 
 
