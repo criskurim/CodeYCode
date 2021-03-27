@@ -80,6 +80,13 @@ Mostra os jogos de esporte do momento. <br>
 
 ---
 
+## Visual da Assistente Virtual - IBET
+Tela de Login 
+
+![image](https://user-images.githubusercontent.com/81394880/112732242-93b40380-8f17-11eb-8a3d-270343daa015.png)
+
+
+
 ### Sprint 01 -
 Em Desenvolvimento
 
