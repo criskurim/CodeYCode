@@ -1,7 +1,7 @@
 ## Assistente Virtual - IBET
 Desenvolvido para ser uma assistente virtual de Esporte, com o  intuito de facilitar a vida do usuário que ama esporte, optamos em criar a **IBET**, para facilitar a vida de milhares de torcedores.
 <p align="center">
-<img src="https://prnt.sc/10x4kmf" width="500px" >
+<img src="https://imgur.com/wVRS2jP" width="750px" >
 </p>
 
 
