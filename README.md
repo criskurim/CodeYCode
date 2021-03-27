@@ -81,9 +81,14 @@ Mostra os jogos de esporte do momento. <br>
 ---
 
 ## Visual da Assistente Virtual - IBET
-Tela de Login 
+Tela de Login ✔️
 
 ![image](https://user-images.githubusercontent.com/81394880/112732242-93b40380-8f17-11eb-8a3d-270343daa015.png)
+
+Tela Inicial ✔️
+
+![image](https://user-images.githubusercontent.com/81394880/112732291-cd850a00-8f17-11eb-9105-b309c1a01890.png)
+
 
 
 
