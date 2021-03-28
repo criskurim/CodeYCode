@@ -5,10 +5,6 @@ Desenvolvido para ser uma assistente virtual de Esporte, com o  intuito de facil
 <img src="https://github.com/criskurim/CodeYCode/blob/main/logo.jpg" width="150px" >
 </p>
 
-
-<p align="center"
-
-
 ## Equipe CodeYCode
 * Andrew Augusto Dias Santos. [GitHub](https://github.com/AndrewAugusto)
 * Cristina. [GitHub](https://github.com/criskurim)
@@ -19,10 +15,8 @@ Desenvolvido para ser uma assistente virtual de Esporte, com o  intuito de facil
 * Renan Kira. [GitHub]()
 * Romário Pinheiro. [GitHub](https://github.com/RomarioPinheiro)
 
-
 ## Vídeo de intrudução ao Projeto IBET
 [![Introdução ao IBET ](http://img.youtube.com/vi/tCxHMiyCjjk/0.jpg)](http://www.youtube.com/watch?v=tCxHMiyCjjk "Vídeo de Intrudução ao Projeto")
-
 
 ---
 ### 🔔  Requisitos
@@ -56,13 +50,10 @@ Informa todos os campeonatos atuais . <br>
 - **Jogos:** <br>
 Mostra os jogos de esporte do momento. <br>
 
-
 ## Tela de Cadastro 
 ![Tela inicial](https://github.com/criskurim/CodeYCode/blob/main/Tela%20inicial.gif)
 
-
 ---
-
 
 ### Tecnologias Utilizadas
 
@@ -79,7 +70,6 @@ Mostra os jogos de esporte do momento. <br>
 ✔️ [Visual Studio Code](https://code.visualstudio.com/)
 
 ✔️ [Google Drive](https://www.google.com/intl/pt-br/drive/about.html)
-
 
 ---
 
@@ -139,7 +129,7 @@ Memes Esportivos ✔️
 
 
 ### Sprint 01 -
-Em Desenvolvimento
+![card](https://github.com/criskurim/CodeYCode/blob/main/Cards/Card%201.png)
 
 ### Sprint 02 -
 Em Desenvolvimento
