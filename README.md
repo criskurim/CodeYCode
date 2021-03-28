@@ -6,7 +6,7 @@ Desenvolvido para ser uma assistente virtual de Esporte, com o  intuito de facil
 </p>
 
 ## Equipe CodeYCode
-* Andrew Augusto Dias Santos. [GitHub](https://github.com/AndrewAugusto)
+* Andrew Augusto Dias Santos (Master). [GitHub](https://github.com/AndrewAugusto)
 * Cristina. [GitHub](https://github.com/criskurim)
 * Antonio Zago. [GitHub](https://github.com/Antonio-Zago)
 * Geovane. [GitHub]()
