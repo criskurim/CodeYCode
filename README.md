@@ -6,6 +6,9 @@ Desenvolvido para ser uma assistente virtual de Esporte, com o  intuito de facil
 </p>
 
 
+<p align="center"
+
+
 ## Equipe CodeYCode
 * Andrew Augusto Dias Santos. [GitHub](https://github.com/AndrewAugusto)
 * Cristina. [GitHub](https://github.com/criskurim)
@@ -15,6 +18,10 @@ Desenvolvido para ser uma assistente virtual de Esporte, com o  intuito de facil
 * Luis Felipe. [GitHub]()
 * Renan Kira. [GitHub]()
 * Romário Pinheiro. [GitHub](https://github.com/RomarioPinheiro)
+
+
+## Vídeo de intrudução ao Projeto IBET
+[![Introdução ao IBET ](http://img.youtube.com/vi/tCxHMiyCjjk/0.jpg)](http://www.youtube.com/watch?v=tCxHMiyCjjk "Vídeo de Intrudução ao Projeto")
 
 
 ---
@@ -48,6 +55,10 @@ Compartilhamento de tirinhas engraçadas criadas pelos fãs. <br>
 Informa todos os campeonatos atuais . <br>
 - **Jogos:** <br>
 Mostra os jogos de esporte do momento. <br>
+
+
+## Tela de Cadastro 
+![Tela inicial](https://github.com/criskurim/CodeYCode/blob/main/Tela%20inicial.gif)
 
 
 ---
