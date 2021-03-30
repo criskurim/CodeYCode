@@ -19,11 +19,6 @@ class PaginaInicial(Screen):
 class Pagina2(Screen):
     pass
 
-class Tarefa(BoxLayout):
-    def __init__(self,text='',**kwargs):
-        super().__init__(**kwargs)
-        self.ids.nome2.text = text
-
 
 
 class teste(App):
