@@ -2,7 +2,7 @@
 
 
 import googlesearch
-from google_utils import Google
+
 
 busca = input("Digite o termo que deseja buscar: ")
 
