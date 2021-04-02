@@ -5,6 +5,9 @@ Desenvolvido para ser uma assistente virtual de Esporte, com o  intuito de facil
 <img src="https://github.com/criskurim/CodeYCode/blob/main/logo.jpg" width="150px" >
 </p>
 
+## Site BackLog e Sprints
+[![Backlog ]](https://trello.com/b/sdjLR68I/codeycode-projeto-mobile "Vídeo de Intrudução ao Projeto")
+
 ## Equipe CodeYCode
 * Andrew Augusto Dias Santos (Master). [GitHub](https://github.com/AndrewAugusto)
 * Cristina. [GitHub](https://github.com/criskurim)
