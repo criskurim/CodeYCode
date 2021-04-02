@@ -6,7 +6,7 @@ Desenvolvido para ser uma assistente virtual de Esporte, com o  intuito de facil
 </p>
 
 ## Site BackLog e Sprints
-![BackLog](https://trello.com/b/sdjLR68I/codeycode-projeto-mobile)
+[BackLog](https://trello.com/b/sdjLR68I/codeycode-projeto-mobile)
 
 ## Equipe CodeYCode
 * Andrew Augusto Dias Santos (Master). [GitHub](https://github.com/AndrewAugusto)
