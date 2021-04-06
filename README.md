@@ -14,7 +14,7 @@ Desenvolvido para ser uma assistente virtual de Esporte, com o  intuito de facil
 * Antonio Zago. [GitHub](https://github.com/Antonio-Zago)
 * Geovane. [GitHub]()
 * João Pedro. [GitHub]()
-* Luis Felipe. [GitHub]()
+* Luis Felipe. [GitHub](https://github.com/LuisAgdo)
 * Renan Kira. [GitHub]()
 * Romário Pinheiro. [GitHub](https://github.com/RomarioPinheiro)
 
