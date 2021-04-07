@@ -3,11 +3,11 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.uix.boxlayout import BoxLayout
 
 class sm(ScreenManager):
-    def MudarPagina2(self):
-        self.current = 'p2'
+    def MudarMenu(self):
+        self.current = 'menu'
         self.nome = self.get_screen('pinicial').ids.nome.text
         self.email = self.get_screen('pinicial').ids.email.text
-        self.get_screen('p2').ids.nome2.text = f'Olá {self.nome}, seu email: {self.email}'
+        #self.get_screen('menu').ids.infos.text = f'Olá {self.nome}, seu email: {self.email}'
         
  
     def MudarPaginaInicial(self):
@@ -16,7 +16,7 @@ class sm(ScreenManager):
 class PaginaInicial(Screen):
     pass
 
-class Pagina2(Screen):
+class MenuInicial(Screen):
     pass
 
 

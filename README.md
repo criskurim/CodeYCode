@@ -5,13 +5,16 @@ Desenvolvido para ser uma assistente virtual de Esporte, com o  intuito de facil
 <img src="https://github.com/criskurim/CodeYCode/blob/main/logo.jpg" width="150px" >
 </p>
 
+## Site BackLog e Sprints
+[BackLog](https://trello.com/b/sdjLR68I/codeycode-projeto-mobile)
+
 ## Equipe CodeYCode
 * Andrew Augusto Dias Santos (Master). [GitHub](https://github.com/AndrewAugusto)
 * Cristina. [GitHub](https://github.com/criskurim)
 * Antonio Zago. [GitHub](https://github.com/Antonio-Zago)
 * Geovane. [GitHub]()
 * João Pedro. [GitHub]()
-* Luis Felipe. [GitHub]()
+* Luis Felipe. [GitHub](https://github.com/LuisAgdo)
 * Renan Kira. [GitHub]()
 * Romário Pinheiro. [GitHub](https://github.com/RomarioPinheiro)
 
@@ -82,6 +85,9 @@ Mostra os jogos de esporte do momento. <br>
 ---
 
 ## Visual da Assistente Virtual - IBET
+
+[Figma](https://www.figma.com/file/FreSegpVaDeGePlIaTzdrN/Protótipo-PI)
+
 Tela de Login ✔️
 
 ![image](https://user-images.githubusercontent.com/81394880/112732242-93b40380-8f17-11eb-8a3d-270343daa015.png)
