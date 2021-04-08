@@ -39,7 +39,7 @@ while ouvindo:
         for i in search(busca, tld="com", num=10, stop=10, pause=2):#realiza a pesquisa
             print(i) #inprime os resultados
 
-    elif frase == "parar":#comando de voz que encerra o programa
+    elif frase == "obrigado":#comando de voz que encerra o programa
         print("O programa encerrou!!")
         ouvindo = False
     else: #imprime sempre que não atende a nenhuma condição
