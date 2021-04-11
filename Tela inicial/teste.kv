@@ -1,6 +1,7 @@
 <sm>:
     PaginaInicial:
     MenuInicial:
+    SobreEsportes:
 
 <PaginaInicial>:
     name: 'pinicial'
@@ -75,10 +76,10 @@
             on_release: app.root.MudarPaginaInicial()
         
         Botao:
-            text:'Voltar'
+            text:'Sobre os esportes'
             size_hint: 0.3, 0.15
             pos_hint: {'center_x': 0.3, 'center_y':  0.6}
-            on_release: app.root.MudarPaginaInicial()
+            on_release: app.root.MudarPaginaSobreEsportes()
         
         Botao:
             text:'Voltar'
@@ -116,3 +117,32 @@
             size_hint: 0.3, 0.15
             pos_hint: {'center_x': 0.7, 'center_y':  0.2}
             on_release: app.stop()
+
+#Página Sobre o esportes
+
+<SobreEsportes>:
+    name: 'sobre'
+    ScrollView:
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: None
+            height: self.minimum_height
+            Button:
+                size_hint_y: None
+                height: 60
+                text:'Ok'
+                on_release: app.root.Futebol()
+
+            BoxLayout:
+                size_hint_y: None
+                id: futebol
+            
+            Button:
+                size_hint_y: None
+                height: 60
+                text:'Ok'
+                on_release: app.root.Volei()
+            
+            BoxLayout:
+                size_hint_y: None
+                id: volei
