@@ -129,13 +129,13 @@ Mostra os jogos de esporte do momento. <br>
 [BackLog](https://trello.com/b/sdjLR68I/codeycode-projeto-mobile)
 
 ### Sprint 01 -
-![card](https://github.com/criskurim/CodeYCode/blob/main/Cards/Card%201.png)
+![card](https://github.com/criskurim/CodeYCode/blob/main/Imagens/Cards/Card%201.png)
 
 ### Sprint 02 -
-![card](https://github.com/criskurim/CodeYCode/blob/main/Cards/Card%202.png)
+![card](https://github.com/criskurim/CodeYCode/blob/main/Imagens/Cards/Card%202.png)
 
 ### Sprint 03 -
-![card](https://github.com/criskurim/CodeYCode/blob/main/Cards/Card%203.png)
+![card](https://github.com/criskurim/CodeYCode/blob/main/Imagens/Cards/Card%203.png)
 
 ### Sprint 04 -
 Em Desenvolvimento
