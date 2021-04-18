@@ -1,0 +1,212 @@
+<sm>:
+    PaginaInicial:
+    MenuInicial:
+    SobreEsportes:
+
+<PaginaInicial>:
+    name: 'pinicial'
+    BoxLayout:
+        orientation:'vertical'
+        padding: 100
+        spacing:50
+
+        canvas:
+            Color:
+                rgba: 0,0.7,0.3,1
+            Rectangle:
+                pos: self.x, self.y
+                size: self.width, self.height
+                
+        Image:
+            source: 'img/logo.jpg'
+            size_hint_y: None
+            height: 100
+
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                text: "Olá, para iniciarmos digite seu nome: "
+
+            TextInput:
+                id: nome
+                multiline: False
+        
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                text: "Digite seu email: "
+
+            TextInput:
+                id: email
+                multiline: False
+        
+        Botao:
+            on_release: app.root.MudarMenu()
+            text: 'Enviar'
+
+<Botao@ButtonBehavior+Label>: #Criação de uma classe botão que erda caracteristicas do botão
+    #Botão arredondado
+    # Todas as mudanças graficas serão executadas antes das classes erdadas, exemplo label
+    canvas.before:
+        Color:
+            rgba: 0.1,0.5,0.7,1
+        Ellipse:
+            pos: self.pos #Posição inicial esquerda em baixo
+            size: self.height, self.height #Largura e altura
+        Ellipse:
+            pos: self.x + self.width - self.height, self.y #Posição de x incial + tamanhos da width - o diametro
+            size: self.height, self.height
+        Rectangle:
+            pos: self.x + self.height/2, self.y
+            size: self.width - self.height, self.height
+
+
+
+#Pagina Menu Inicial
+<MenuInicial>:
+    name: 'menu'
+    FloatLayout:
+        id: box
+        
+        #Coluna Esquerda
+
+        Botao:
+            text:'Sobre os esportes'
+            size_hint: 0.3, 0.15
+            pos_hint: {'center_x': 0.3, 'center_y':  0.8}
+            on_release: app.root.MudarPaginaSobreEsportes()
+
+        Botao:
+            text:'Voltar'
+            size_hint: 0.3, 0.15
+            pos_hint: {'center_x': 0.3, 'center_y':  0.6}
+            on_release: app.root.MudarPaginaInicial()
+        
+        
+        Botao:
+            text:'Voltar'
+            size_hint: 0.3, 0.15
+            pos_hint: {'center_x': 0.3, 'center_y':  0.4}
+            on_release: app.root.MudarPaginaInicial()
+        
+        Botao:
+            text:'Voltar'
+            size_hint: 0.3, 0.15
+            pos_hint: {'center_x': 0.3, 'center_y':  0.2}
+            on_release: app.root.MudarPaginaInicial()
+
+        #Coluna Direita
+        Botao:
+            text:'Sair'
+            size_hint: 0.3, 0.15
+            pos_hint: {'center_x': 0.7, 'center_y':  0.8}
+            on_release: app.stop()
+
+        Botao:
+            text:'Sair'
+            size_hint: 0.3, 0.15
+            pos_hint: {'center_x': 0.7, 'center_y':  0.6}
+            on_release: app.stop()
+
+        Botao:
+            text:'Sair'
+            size_hint: 0.3, 0.15
+            pos_hint: {'center_x': 0.7, 'center_y':  0.4}
+            on_release: app.stop()
+
+        Botao:
+            text:'Sair'
+            size_hint: 0.3, 0.15
+            pos_hint: {'center_x': 0.7, 'center_y':  0.2}
+            on_release: app.stop()
+
+#Página Sobre o esportes
+
+<Titulo@Label>: #Criação de uma classe botão que erda caracteristicas do botão
+    #Botão arredondado
+    # Todas as mudanças graficas serão executadas antes das classes erdadas, exemplo label
+    canvas.before:
+        Color:
+            rgba: 0.1,0.5,0.7,1
+        Ellipse:
+            pos: self.pos #Posição inicial esquerda em baixo
+            size: self.height, self.height #Largura e altura
+        Ellipse:
+            pos: self.x + self.width - self.height, self.y #Posição de x incial + tamanhos da width - o diametro
+            size: self.height, self.height
+        Rectangle:
+            pos: self.x + self.height/2, self.y
+            size: self.width - self.height, self.height
+
+<SobreEsportes>:
+    name: 'sobre'
+    ScrollView:
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: None
+            height: self.minimum_height
+
+
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint_y: None
+                height: 180
+                padding: 40
+
+                Button:
+                    text:'<'
+                    size_hint_y: None
+                    size_hint_x: None
+                    width: 40
+                    height: 40
+                    on_release: app.root.MudarMenu()
+
+                Titulo:
+                    text: 'Sobre Esportes'
+                    size_hint_x: 0.8
+                    pos_hint: {'center_x': 0.5}
+
+            Button:
+                size_hint_y: None
+                height: 60
+                text:'Futebol'
+                on_release: app.root.Futebol()
+
+            BoxLayout:
+                size_hint_y: None
+                height: self.minimum_height
+                id: futebol
+
+            
+            Button:
+                size_hint_y: None
+                height: 60
+                text:'Volêi'
+                on_release: app.root.Volei()
+            
+            BoxLayout:
+                size_hint_y: None
+                height: self.minimum_height
+                id: volei
+
+            Button:
+                size_hint_y: None
+                height: 60
+                text:'Basquete'
+                on_release: app.root.Basquete()
+            
+            BoxLayout:
+                size_hint_y: None
+                height: self.minimum_height
+                id: basquete
+
+            Button:
+                size_hint_y: None
+                height: 60
+                text:'Counter Strike'
+                on_release: app.root.Cs()
+            
+            BoxLayout:
+                size_hint_y: None
+                height: self.minimum_height
+                id: cs
