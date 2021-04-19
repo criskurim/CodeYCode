@@ -84,7 +84,7 @@ Mostra os jogos de esporte do momento. <br>
 
 ----
 
-## Site BackLog e Sprints
+### BackLog e Sprints
 [BackLog](https://trello.com/b/sdjLR68I/codeycode-projeto-mobile)
 
 ### Sprint 01 -
