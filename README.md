@@ -15,10 +15,13 @@ Desenvolvido para ser uma assistente virtual de Esporte, com o  intuito de facil
 * Renan Kira. [GitHub]()
 * Romário Pinheiro. [GitHub](https://github.com/RomarioPinheiro)
 
+----
+
 ## Vídeo de intrudução ao Projeto IBET
 [![Introdução ao IBET ](http://img.youtube.com/vi/tCxHMiyCjjk/0.jpg)](http://www.youtube.com/watch?v=tCxHMiyCjjk "Vídeo de Intrudução ao Projeto")
 
----
+----
+
 ### 🔔  Requisitos
  * Responder a comando de voz ou sons específicos;
  * Possuir no mínimo 8 e ações distintas e de natureza distintas;
@@ -26,7 +29,7 @@ Desenvolvido para ser uma assistente virtual de Esporte, com o  intuito de facil
  * Retornar o comando em qualquer forma (Som, texto ou ação);
  * Ter um contexto específico de aplicação.
 
----
+----
 
 ### 📱 Funcionalidades
 - **Noticias:** <br>
@@ -53,7 +56,7 @@ Mostra os jogos de esporte do momento. <br>
 ## Tela de Cadastro 
 ![Tela inicial](https://github.com/criskurim/CodeYCode/blob/main/Imagens/Tela%20inicial.gif)
 
----
+----
 
 ### Tecnologias Utilizadas
 
@@ -71,7 +74,7 @@ Mostra os jogos de esporte do momento. <br>
 
 ✔️ [Google Drive](https://www.google.com/intl/pt-br/drive/about.html)
 
----
+----
 
 ### 📅 Entregas
 - [Sprint 1](https://trello.com/b/sdjLR68I/codeycode-projeto-mobile) - 08/03/2021 a 28/03/2021 (Finalizada)
@@ -79,13 +82,30 @@ Mostra os jogos de esporte do momento. <br>
 - Sprint 3 - 26/04/2021 a 16/05/2021
 - Sprint 4 - 17/05/2021 a 05/06/2021  
 
----
+----
+
+## Site BackLog e Sprints
+[BackLog](https://trello.com/b/sdjLR68I/codeycode-projeto-mobile)
+
+### Sprint 01 -
+![card](https://github.com/criskurim/CodeYCode/blob/main/Imagens/Cards/Card%201.png)
+
+### Sprint 02 -
+![card](https://github.com/criskurim/CodeYCode/blob/main/Imagens/Cards/Card%202.png)
+
+### Sprint 03 -
+![card](https://github.com/criskurim/CodeYCode/blob/main/Imagens/Cards/Card%203.png)
+
+### Sprint 04 -
+Em Desenvolvimento
+
+----
 
 ## Visual da Assistente Virtual - IBET
 
 [Figma](https://www.figma.com/file/FreSegpVaDeGePlIaTzdrN/Protótipo-PI)
 
----
+----
 
 ##Tela de Login ✔️
 
@@ -122,20 +142,3 @@ Mostra os jogos de esporte do momento. <br>
 ##Memes Esportivos ✔️
 
 ![image](https://user-images.githubusercontent.com/81394880/112732509-21dcb980-8f19-11eb-871b-7d08b549d9f8.png)
-
----
-
-## Site BackLog e Sprints
-[BackLog](https://trello.com/b/sdjLR68I/codeycode-projeto-mobile)
-
-### Sprint 01 -
-![card](https://github.com/criskurim/CodeYCode/blob/main/Imagens/Cards/Card%201.png)
-
-### Sprint 02 -
-![card](https://github.com/criskurim/CodeYCode/blob/main/Imagens/Cards/Card%202.png)
-
-### Sprint 03 -
-![card](https://github.com/criskurim/CodeYCode/blob/main/Imagens/Cards/Card%203.png)
-
-### Sprint 04 -
-Em Desenvolvimento
