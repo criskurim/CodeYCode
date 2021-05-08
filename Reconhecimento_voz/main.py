@@ -3,6 +3,7 @@
 import speech_recognition as sr
 from googlesearch import search
 import pyttsx3
+import webbrowser
 
 #Declaração de funções a serem chamadas ao longo do programa
 
@@ -29,9 +30,13 @@ def sintese_voz(entrada_de_texto): #função para sintetizar voz
     falar.runAndWait()
 
 def pesquisa_web(termo): #realiza a pesquisa em google.com e imprime os links
+    list_sites_resultados = []
     for i in search(termo, tld="com", num=3, stop=4, pause=2):
-        print(i)
-    return
+        list_sites_resultados.append(i)
+    return list_sites_resultados
+
+def abrir_site(site):
+    webbrowser.open(site, new=0, autoraise=True)
 
 # início do programa
 bet_inicio = "Olá, eu sou Bet, sua assistente virtual!"
@@ -60,7 +65,39 @@ while ouvindo:
                 sintese_voz(bet_avisa)
                 print(f'{bet_avisa}')         #confirma para o usuário o que foi dito
                 print(pesquisa_web(termo_busca))
-                pesquisando = False
+                abrindo_sites = True
+                while abrindo_sites:
+                    bet_pergunta = "Deseja abrir algum destes sites?"
+                    sintese_voz(bet_pergunta)
+                    print(bet_pergunta)
+                    resposta = ouvir_microfone()
+                    if encontrar_comando('sim', resposta):
+                        respondendo = True
+                        while respondendo:
+                            bet_pergunta = 'Qual destes sites deseja abrir?'
+                            sintese_voz(bet_pergunta)
+                            resposta = ouvir_microfone()
+                            if encontrar_comando('primeiro', resposta):
+                                abrir_site(pesquisa_web(termo_busca)[0])
+                                respondendo = False
+                            elif encontrar_comando('segundo', resposta):
+                                abrir_site(pesquisa_web(termo_busca)[1])
+                                respondendo = False
+                            elif encontrar_comando('terceiro', resposta):
+                                abrir_site(pesquisa_web(termo_busca)[2])
+                                respondendo = False
+                            elif encontrar_comando('quarto', resposta):
+                                abrir_site(pesquisa_web(termo_busca)[3])
+                                respondendo = False
+                            else:
+                                sintese_voz('Não entendi, tente novamente!')
+                                respondendo = True
+                    elif encontrar_comando('não', resposta):
+                        abrindo_sites = False
+                    else:
+                        sintese_voz('Não ententi, tente novamente!')
+                        abrindo_sites = True
+                    pesquisando = False
             else:
                 sintese_voz('Não entendi, tente novamente!')
                 pesquisando = True
