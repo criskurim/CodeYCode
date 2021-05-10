@@ -4,6 +4,7 @@ import speech_recognition as sr
 from googlesearch import search
 import pyttsx3
 import webbrowser
+import agenda_c_bd
 
 #Declaração de funções a serem chamadas ao longo do programa
 
@@ -31,7 +32,8 @@ def sintese_voz(entrada_de_texto): #função para sintetizar voz
 
 def pesquisa_web(termo): #realiza a pesquisa em google.com e imprime os links
     list_sites_resultados = []
-    for i in search(termo, tld="com", num=3, stop=4, pause=2):
+    pesquisa = search(termo, num_results=3)
+    for i in pesquisa:
         list_sites_resultados.append(i)
     return list_sites_resultados
 
@@ -104,6 +106,14 @@ while ouvindo:
 
     elif encontrar_comando('obrigado', frase):       #comando de voz que encerra o programa
         ouvindo = False
+    
+    elif encontrar_comando('agenda', frase):
+        bet_pergunta = ("Aqui está sua agenda completa: ")
+        print(bet_pergunta)
+        sintese_voz(bet_pergunta)
+
+
+        agenda_c_bd.exibir_agenda()
 
     else:                           #ouve e imprime o que foi dito indefinidamente até que algum comando seja entendido
         sintese_voz(frase)

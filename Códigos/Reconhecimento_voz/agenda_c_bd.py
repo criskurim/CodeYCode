@@ -7,7 +7,6 @@ def exibir_agenda():
     for i in cursor:
         print (i)
     banco.close()
-    print("Esta é sua agenda atualizada!")
 
 def inserir_na_agenda(time, data):
     try:
@@ -60,12 +59,12 @@ def atualizar_na_agenda(time, data):
 
 # cursor.execute("SELECT * FROM agenda1")
 # print(cursor.fetchall())
-time = input("Time: ")
-data = input("Data do jogo: ")
+#time = input("Time: ")
+#data = input("Data do jogo: ")
 #atualizar_na_agenda(time, data)
-inserir_na_agenda(time, data)
+#inserir_na_agenda(time, data)
 
 
 #deletar_na_agenda(time)
 # inserir_na_agenda("cruzeiro", "12/07/2021")
-exibir_agenda()
+#exibir_agenda()
