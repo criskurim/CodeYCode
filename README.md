@@ -1,5 +1,5 @@
 ## Assistente Virtual - IBET
-Desenvolvido para ser uma assistente virtual de Esporte, com o  intuito de facilitar a vida do usuário que ama esporte, optamos em criar a **IBET**, para facilitar a vida de milhares de torcedores.
+Desenvolvido para ser uma assistente virtual de Esporte, com o meio de facilitar a vida do usuário que ama esporte e ama torcer.
 
 <p align="center">
 <img src="https://github.com/criskurim/CodeYCode/blob/main/Imagens/logo-removebg-preview.png" width="200px" >
@@ -7,13 +7,12 @@ Desenvolvido para ser uma assistente virtual de Esporte, com o  intuito de facil
 
 ## Equipe CodeYCode
 * Andrew Augusto Dias Santos (Master). [GitHub](https://github.com/AndrewAugusto)
-* Cristina. [GitHub](https://github.com/criskurim)
-* Antonio Zago. [GitHub](https://github.com/Antonio-Zago)
-* Geovane. [GitHub]()
-* João Pedro. [GitHub]()
-* Luis Felipe. [GitHub](https://github.com/LuisAgdo)
-* Renan Kira. [GitHub]()
-* Romário Pinheiro. [GitHub](https://github.com/RomarioPinheiro)
+* Cristina Moreira Vespa. [GitHub](https://github.com/criskurim)
+* Antonio Roberto de Almeida Zago. [GitHub](https://github.com/Antonio-Zago)
+* Geovane Afonso Leite Nunes. [GitHub]()
+* Luis Felipe Agdo Pereira. [GitHub](https://github.com/LuisAgdo)
+* Renan Furukawa Kira. [GitHub]()
+* Romário Araujo Pinheiro. [GitHub](https://github.com/RomarioPinheiro)
 
 ----
 
@@ -22,7 +21,7 @@ Desenvolvido para ser uma assistente virtual de Esporte, com o  intuito de facil
 
 ----
 
-### 🔔  Requisitos
+### 🔔  Requisitos Necessários
  * Responder a comando de voz ou sons específicos;
  * Possuir no mínimo 8 e ações distintas e de natureza distintas;
  * Ser mobile, web ou desktop;
@@ -35,9 +34,9 @@ Desenvolvido para ser uma assistente virtual de Esporte, com o  intuito de facil
 - **Noticias:** <br>
 Novidades sobre o time do coração ou sobre o esporte. <br>
 - **Ao Vivo:** <br>
-Consultar o placar daquele jogo tão esperado na semana. <br>
+Consultar o placar placar do jogo, quando é impossível de assiti-lo. <br>
 - **Vídeos:** <br>
-Visualizar a jogada do momento ou a atrapalhada (Youtube). <br>
+Rever as jogadas das partidas, comentários do jogo (Youtube). <br>
 - **Horario de Jogo:** <br>
 Mostrar os horários do jogos e a possíbilidade de criar um lembrete. <br>
 - **Informações da Equipe:** <br>
@@ -67,8 +66,6 @@ Agendar o dia da partida tão esperada do time. <br>
 
 ✔️ [Python](https://www.python.org)
 
-✔️ [Android Studio](https://developer.android.com/studio)
-
 ✔️ [Visual Studio Code](https://code.visualstudio.com/)
 
 ✔️ [Google Drive](https://www.google.com/intl/pt-br/drive/about.html)
@@ -77,8 +74,8 @@ Agendar o dia da partida tão esperada do time. <br>
 
 ### 📅 Entregas
 - [Sprint 1](https://trello.com/b/sdjLR68I/codeycode-projeto-mobile) - 08/03/2021 a 28/03/2021 (Finalizada)
-- [Sprint 2](https://trello.com/b/sdjLR68I/codeycode-projeto-mobile) - 29/03/2021 a 18/04/2021 (Em Andamento)
-- Sprint 3 - 26/04/2021 a 16/05/2021
+- [Sprint 2](https://trello.com/b/sdjLR68I/codeycode-projeto-mobile) - 29/03/2021 a 18/04/2021 (Finalizada)
+- [Sprint 3](https://www.google.com/imgres?imgurl=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fcarimbo-de-borracha-em-andamento-83357711.jpg&imgrefurl=https%3A%2F%2Fpt.dreamstime.com%2Filustra%25C3%25A7%25C3%25A3o-stock-carimbo-de-borracha-em-andamento-image83357711&tbnid=JOEgi38vqTHTdM&vet=12ahUKEwj9sKCdoMnwAhVnu5UCHXVRBy4QMygAegUIARDUAQ..i&docid=Mq8aD3_IpJry8M&w=800&h=550&q=em%20andamento&ved=2ahUKEwj9sKCdoMnwAhVnu5UCHXVRBy4QMygAegUIARDUAQ) - 26/04/2021 a 16/05/2021
 - Sprint 4 - 17/05/2021 a 05/06/2021  
 
 ----
@@ -86,58 +83,8 @@ Agendar o dia da partida tão esperada do time. <br>
 ### BackLog e Sprints
 [BackLog](https://trello.com/b/sdjLR68I/codeycode-projeto-mobile)
 
-### Sprint 01 -
-![card](https://github.com/criskurim/CodeYCode/blob/main/Imagens/Cards/Card%201.png)
-
-### Sprint 02 -
-![card](https://github.com/criskurim/CodeYCode/blob/main/Imagens/Cards/Card%202.png)
-
-### Sprint 03 -
-![card](https://github.com/criskurim/CodeYCode/blob/main/Imagens/Cards/Card%203.png)
-
-### Sprint 04 -
-Em Desenvolvimento
-
 ----
 
 ## Visual da Assistente Virtual - IBET
 
 [Figma](https://www.figma.com/file/FreSegpVaDeGePlIaTzdrN/Protótipo-PI)
-
-----
-
-##Tela de Login ✔️
-
-![image](https://user-images.githubusercontent.com/81394880/112732242-93b40380-8f17-11eb-8a3d-270343daa015.png)
-
-##Tela Inicial ✔️
-
-![image](https://user-images.githubusercontent.com/81394880/112732291-cd850a00-8f17-11eb-9105-b309c1a01890.png)
-
-##Página de Jogos Ao Vivo ✔️
-
-![image](https://user-images.githubusercontent.com/81394880/112732335-150b9600-8f18-11eb-9bb2-ed05399a6514.png)
-
-##Página com horários de jogos ✔️
-
-![image](https://user-images.githubusercontent.com/81394880/112732386-6e73c500-8f18-11eb-9b6d-17227424429b.png)
-
-##Filmes e Documentários de Esportes ✔️
-
-![image](https://user-images.githubusercontent.com/81394880/112732415-94996500-8f18-11eb-817f-54bba9126dad.png)
-
-##Informações sobre Esportes ✔️
-
-![image](https://user-images.githubusercontent.com/81394880/112732429-abd85280-8f18-11eb-9edc-00382cd808d6.png)
-
-##Informações sobre Equipes Esportivas ✔️ 
-
-![image](https://user-images.githubusercontent.com/81394880/112732446-c7dbf400-8f18-11eb-9b9e-1689411a34b2.png)
- 
-##Página de Apostas ✔️ 
-
-![image](https://user-images.githubusercontent.com/81394880/112732461-dcb88780-8f18-11eb-9266-644becb7a699.png)
-
-##Memes Esportivos ✔️
-
-![image](https://user-images.githubusercontent.com/81394880/112732509-21dcb980-8f19-11eb-871b-7d08b549d9f8.png)
