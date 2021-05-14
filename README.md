@@ -75,7 +75,7 @@ Agendar o dia da partida tão esperada do time. <br>
 ### 📅 Entregas
 - [Sprint 1](https://trello.com/b/sdjLR68I/codeycode-projeto-mobile) - 08/03/2021 a 28/03/2021 (Finalizada)
 - [Sprint 2](https://trello.com/b/sdjLR68I/codeycode-projeto-mobile) - 29/03/2021 a 18/04/2021 (Finalizada)
-- [Sprint 3](https://www.google.com/imgres?imgurl=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fcarimbo-de-borracha-em-andamento-83357711.jpg&imgrefurl=https%3A%2F%2Fpt.dreamstime.com%2Filustra%25C3%25A7%25C3%25A3o-stock-carimbo-de-borracha-em-andamento-image83357711&tbnid=JOEgi38vqTHTdM&vet=12ahUKEwj9sKCdoMnwAhVnu5UCHXVRBy4QMygAegUIARDUAQ..i&docid=Mq8aD3_IpJry8M&w=800&h=550&q=em%20andamento&ved=2ahUKEwj9sKCdoMnwAhVnu5UCHXVRBy4QMygAegUIARDUAQ) - 26/04/2021 a 16/05/2021
+- [Sprint 3](https://www.dropbox.com/s/gxiptng35u7bibi/carimbo-de-borracha-em-andamento-83357711.jpg?dl=0) - 26/04/2021 a 16/05/2021 (Em Andamento)
 - Sprint 4 - 17/05/2021 a 05/06/2021  
 
 ----
