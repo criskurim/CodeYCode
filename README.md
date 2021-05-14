@@ -52,9 +52,8 @@ Compartilhamento de tirinhas engraçadas criadas pelos fãs. <br>
 Informa todos os campeonatos atuais . <br>
 - **Jogos:** <br>
 Mostra os jogos de esporte do momento. <br>
-
-## Tela de Cadastro 
-![Tela inicial](https://github.com/criskurim/CodeYCode/blob/main/Imagens/Tela%20inicial.gif)
+- **Agenda:**<br>
+Agendar o dia da partida tão esperada do time. <br>
 
 ----
 
