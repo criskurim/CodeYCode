@@ -58,7 +58,7 @@ Agendar o dia da partida tão esperada do time. <br>
 
 ### Tecnologias Utilizadas
 
-✔️ [GitHub](https://github.com)
+✔️ [GitHub](https://github.com, '_blank')
 
 ✔️ [Figma](https://figma.com)
 
