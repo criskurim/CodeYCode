@@ -6,13 +6,13 @@ Desenvolvido para ser uma assistente virtual de Esporte, com o meio de facilitar
 </p>
 
 ## Equipe CodeYCode
-* Andrew Augusto Dias Santos (Master). [GitHub](https://github.com/AndrewAugusto)
-* Cristina Moreira Vespa. [GitHub](https://github.com/criskurim)
-* Antonio Roberto de Almeida Zago. [GitHub](https://github.com/Antonio-Zago)
-* Geovane Afonso Leite Nunes. [GitHub]()
-* Luis Felipe Agdo Pereira. [GitHub](https://github.com/LuisAgdo)
-* Renan Furukawa Kira. [GitHub]()
-* Romário Araujo Pinheiro. [GitHub](https://github.com/RomarioPinheiro)
+* Andrew Augusto Dias Santos (Master). [**GitHub**](https://github.com/AndrewAugusto)
+* Cristina Moreira Vespa. [**GitHub**](https://github.com/criskurim)
+* Antonio Roberto de Almeida Zago. [**GitHub**](https://github.com/Antonio-Zago)
+* Geovane Afonso Leite Nunes. [**GitHub**]()
+* Luis Felipe Agdo Pereira. [**GitHub**](https://github.com/LuisAgdo)
+* Renan Furukawa Kira. [**GitHub**]()
+* Romário Araujo Pinheiro. [**GitHub**](https://github.com/RomarioPinheiro)
 
 ----
 
@@ -73,18 +73,18 @@ Agendar o dia da partida tão esperada do time. <br>
 ----
 
 ### 📅 Entregas
-- [Sprint 1](https://trello.com/b/sdjLR68I/codeycode-projeto-mobile) - 08/03/2021 a 28/03/2021 (Finalizada)
-- [Sprint 2](https://trello.com/b/sdjLR68I/codeycode-projeto-mobile) - 29/03/2021 a 18/04/2021 (Finalizada)
-- [Sprint 3](https://www.dropbox.com/s/gxiptng35u7bibi/carimbo-de-borracha-em-andamento-83357711.jpg?dl=0) - 26/04/2021 a 16/05/2021 (Em Andamento)
-- [Sprint 4] - 17/05/2021 a 05/06/2021  
+- [**Sprint 1**](https://trello.com/b/sdjLR68I/codeycode-projeto-mobile) - 08/03/2021 a 28/03/2021 (Finalizada)
+- [**Sprint 2**](https://trello.com/b/sdjLR68I/codeycode-projeto-mobile) - 29/03/2021 a 18/04/2021 (Finalizada)
+- [**Sprint 3**](https://www.dropbox.com/s/gxiptng35u7bibi/carimbo-de-borracha-em-andamento-83357711.jpg?dl=0) - 26/04/2021 a 16/05/2021 (Em Andamento)
+- Sprint 4 - 17/05/2021 a 05/06/2021  
 
 ----
 
 ### BackLog e Sprints
-[BackLog](https://trello.com/b/sdjLR68I/codeycode-projeto-mobile)
+[**BackLog**](https://trello.com/b/sdjLR68I/codeycode-projeto-mobile)
 
 ----
 
 ## Visual da Assistente Virtual - IBET
 
-[Figma](https://www.figma.com/file/FreSegpVaDeGePlIaTzdrN/Protótipo-PI)
+[**Figma**](https://www.figma.com/file/FreSegpVaDeGePlIaTzdrN/Protótipo-PI)
