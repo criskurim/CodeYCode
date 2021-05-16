@@ -4,6 +4,7 @@ import speech_recognition as sr
 from googlesearch import search
 import pyttsx3
 import webbrowser
+import agenda_c_bd
 
 #Declaração de funções a serem chamadas ao longo do programa
 
@@ -31,12 +32,16 @@ def sintese_voz(entrada_de_texto): #função para sintetizar voz
 
 def pesquisa_web(termo): #realiza a pesquisa em google.com e imprime os links
     list_sites_resultados = []
-    for i in search(termo, tld="com", num=3, stop=4, pause=2):
+    pesquisa = search(termo, num_results=3)
+    for i in pesquisa:
         list_sites_resultados.append(i)
     return list_sites_resultados
 
 def abrir_site(site):
     webbrowser.open(site, new=0, autoraise=True)
+
+def verificar_data(dia, mes, ano):
+    data = f"{ano}"
 
 # início do programa
 bet_inicio = "Olá, eu sou Bet, sua assistente virtual!"
@@ -48,7 +53,7 @@ sintese_voz(bet_inicio)
 ouvindo = True
 
 while ouvindo:
-    bet_diz = 'Estou ouvindo!'
+    bet_diz = 'De um comando!'
     print(bet_diz)                  #solicita que o usuária diga algo
     sintese_voz(bet_diz)
     frase = ouvir_microfone() #aciona a função ouvir_microfone() e armazena em uma variável o que foi retornado da função
@@ -104,6 +109,91 @@ while ouvindo:
 
     elif encontrar_comando('obrigado', frase):       #comando de voz que encerra o programa
         ouvindo = False
+    
+
+    #Agenda
+    elif encontrar_comando('agenda', frase):
+        bet_pergunta = ("Aqui está sua agenda completa de jogos: ")
+        print(bet_pergunta)
+        sintese_voz(bet_pergunta)
+
+        agenda_c_bd.exibir_agenda()
+
+        while True:
+
+            bet_pergunta = ("O que deseja realizar com a agenda: ")
+            print(bet_pergunta)
+            sintese_voz(bet_pergunta)
+
+            termo_busca = ouvir_microfone()
+
+
+            if(encontrar_comando('inserir', termo_busca)):
+
+                bet_pergunta = ("Digite a data do jogo:  ")
+                print(bet_pergunta)
+                sintese_voz(bet_pergunta)
+
+                data = str(input('Data (dd/mm/aaaa): '))
+                    
+
+                bet_pergunta = ("Digite o horario do jogo? ")
+                print(bet_pergunta)
+                sintese_voz(bet_pergunta)
+
+                horario = str(input('Horario (hh:mm): '))
+
+                bet_pergunta = ("Fale o nome do primeiro time que irá jogar:  ")
+                print(bet_pergunta)
+                sintese_voz(bet_pergunta)
+
+                time1 = ouvir_microfone()
+
+                bet_pergunta = ("Fale o nome do segundo time que irá jogar:  ")
+                print(bet_pergunta)
+                sintese_voz(bet_pergunta)
+
+                time2 = ouvir_microfone()
+
+                print(f'{time1} x {time2}')
+                print(f'{data} --- {horario}')
+
+
+                while True:
+                    bet_pergunta = ("Deseja inserir esse jogo na agenda? ")
+                    print(bet_pergunta)
+                    sintese_voz(bet_pergunta)
+
+                    resposta = ouvir_microfone()
+
+                    if(encontrar_comando('sim', resposta)):
+                        agenda_c_bd.inserir_na_agenda(time1, time2, data, horario)
+                        break
+                    elif(encontrar_comando('não', resposta)):
+                        break
+                    else:
+                        continue
+                
+                break
+            elif(encontrar_comando('deletar', termo_busca)):
+
+                bet_pergunta = ("Digite o código do jogo para deletar: ")
+                print(bet_pergunta)
+                sintese_voz(bet_pergunta)
+
+                cod_deletar = str(input('Código: '))
+
+                agenda_c_bd.deletar_na_agenda(cod_deletar)
+                
+
+
+
+                break
+            else:
+                continue
+
+
+
 
     else:                           #ouve e imprime o que foi dito indefinidamente até que algum comando seja entendido
         sintese_voz(frase)
