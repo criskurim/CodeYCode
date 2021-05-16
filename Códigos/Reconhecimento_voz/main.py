@@ -43,6 +43,15 @@ def abrir_site(site):
 def verificar_data(dia, mes, ano):
     data = f"{ano}"
 
+def consulta_time(time, list):  
+    if time in list:
+        return True
+    else:
+        return False
+# listas de clubes brasileiros para referência
+
+list_times = ['América-MG', 'Athletico-PR', 'Atlético-GO', 'Atlético-MG', 'Bahia', 'Bragantino', 'Ceará', 'Chapecoense', 'Corinthians', 'Cuiabá', 'Flamengo', 'Fluminense', 'Fortaleza', 'Grêmio', 'Internacional', 'Juventude', 'Palmeiras', 'Santos', 'São Paulo', 'Sport', 'Avaí', 'Botafogo', 'Brasil de Pelotas', 'Brusque', 'CRB', 'CSA', 'Confiança', 'Coritiba', 'Cruzeiro', 'Goiás', 'Guarani', 'Londrina', 'Náutico', 'Operário-PR', 'Ponte Preta', 'Remo', 'Sampaio Corrêa', 'Vasco', 'Vila Nova', 'Vitória']
+
 # início do programa
 bet_inicio = "Olá, eu sou Bet, sua assistente virtual!"
 
@@ -53,12 +62,12 @@ sintese_voz(bet_inicio)
 ouvindo = True
 
 while ouvindo:
-    bet_diz = 'De um comando!'
-    print(bet_diz)                  #solicita que o usuária diga algo
+    bet_diz = 'Dê um comando!'
+    print(bet_diz)                                   #solicita que o usuária diga algo
     sintese_voz(bet_diz)
-    frase = ouvir_microfone() #aciona a função ouvir_microfone() e armazena em uma variável o que foi retornado da função
+    frase = ouvir_microfone()                        #aciona a função ouvir_microfone() e armazena em uma variável o que foi retornado da função
 
-    if encontrar_comando('pesquisa', frase):        #condição para realizar a função pesquisa_web
+    if encontrar_comando('pesquisa', frase):         #condição para realizar a função pesquisa_web
         bet_pergunta = ("O que deseja pesquisar? ")
         print(bet_pergunta)
         sintese_voz(bet_pergunta)
@@ -85,15 +94,20 @@ while ouvindo:
                             if encontrar_comando('primeiro', resposta):
                                 abrir_site(pesquisa_web(termo_busca)[0])
                                 respondendo = False
+                                pesquisando = False
                             elif encontrar_comando('segundo', resposta):
                                 abrir_site(pesquisa_web(termo_busca)[1])
                                 respondendo = False
+                                pesquisando = False
                             elif encontrar_comando('terceiro', resposta):
                                 abrir_site(pesquisa_web(termo_busca)[2])
                                 respondendo = False
+                                pesquisando = False
                             elif encontrar_comando('quarto', resposta):
                                 abrir_site(pesquisa_web(termo_busca)[3])
                                 respondendo = False
+                                pesquisando = False
+                                
                             else:
                                 sintese_voz('Não entendi, tente novamente!')
                                 respondendo = True
@@ -185,17 +199,67 @@ while ouvindo:
 
                 agenda_c_bd.deletar_na_agenda(cod_deletar)
                 
-
-
-
                 break
             else:
                 continue
 
+        #busca por notícias(globo esporte)
+    elif (encontrar_comando('notícias', frase)):
+        busca_noticias = True
+        while busca_noticias:
+            bet_diz = 'Deseja receber notícias sobre qual time? '
+            sintese_voz(bet_diz)
+            time = ouvir_microfone()
+            
+            if consulta_time(time, list_times):
+                bet_diz = 'Você escolheu: ', time
+                site_noticias = f'https://globoesporte.globo.com/busca/?q={time}'
+                abrir_site(site_noticias)
+                busca_noticias = False
+            else:
+                bet_avisa = 'Não entendi qual o time você escolheu! Repita, por favor!'
+                sintese_voz(bet_avisa)
+                busca_noticias = True
+        
+        #busca por vídeos(youtube)
+    elif (encontrar_comando('vídeos', frase)):
+        
+        busca_videos = True
+        while busca_videos:
+            bet_diz = 'Deseja assistir vídeos sobre qual time? '
+            sintese_voz(bet_diz)
+            time = ouvir_microfone()
+            if consulta_time(time, list_times):
+                bet_diz = 'Você escolheu: ', time
+                sintese_voz(bet_diz)
+                site_videos = f'www.youtube.com/results?search_query={time}'
+                abrir_site(site_videos)
+                busca_videos = False
+            else:
+                bet_avisa = 'Não entendi qual o time você escolheu! Repita, por favor!'
+                sintese_voz(bet_avisa)
+                busca_videos = True
 
-
-
-    else:                           #ouve e imprime o que foi dito indefinidamente até que algum comando seja entendido
+        #busca por memes (ole do brasil)
+    elif (encontrar_comando('memes', frase)):
+        busca_memes = True
+        while busca_memes:
+            bet_diz = 'Deseja visualizar memes sobre qual time? '
+            sintese_voz(bet_diz)
+            time = ouvir_microfone()
+            if consulta_time(time, list_times):
+                bet_diz = 'Você escolheu: ', time
+                sintese_voz(bet_diz)
+                site_memes = f'https://oledobrasil.com.br/?s={time}'
+                abrir_site(site_memes)
+                busca_memes = False
+            else:
+                bet_avisa = 'Não entendi qual o time você escolheu! Repita, por favor!'
+                sintese_voz(bet_avisa)
+                busca_memes = True
+        
+        #ouve e imprime o que foi dito indefinidamente até que algum comando seja entendido
+    else:                
         sintese_voz(frase)
         print(frase)
 
