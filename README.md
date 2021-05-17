@@ -95,6 +95,6 @@ Agendar o dia da partida tão esperada do time. <br>
 
 ----
 
-## Visual da Assistente Virtual - IBET
+## Prototipo da Assistente Virtual - IBET
 
 [**Figma**](https://www.figma.com/file/FreSegpVaDeGePlIaTzdrN/Protótipo-PI)
