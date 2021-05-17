@@ -18,5 +18,12 @@
 
 ----
 
+## Prototipo da Assistente Virtual - IBET
+
+[*Prototipo do Aplicativo (Figma)*](https://www.figma.com/file/FreSegpVaDeGePlIaTzdrN/Protótipo-PI)
+
+
+----
+
 ## *Tela de Login*
 <img src="https://github.com/criskurim/CodeYCode/blob/main/Sprints/1ª%20Sprint/Tela%20inicial.gif" width="800px">
