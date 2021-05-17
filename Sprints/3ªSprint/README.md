@@ -6,7 +6,7 @@
 
 ----
 
-### Backlog:
+### *Backlog*:
 - Estudos sobre Python e Bibliotecas
 - Função de busca e retorno de busca de vídeo
 - Função de busca e retorno de busca de noticias
@@ -16,5 +16,10 @@
 
 ----
 
-## **Card** 
+## *Card* 
 <img src="https://github.com/criskurim/CodeYCode/blob/main/Sprints/3ªSprint/Card%203.png" width="800px" >
+
+----
+
+## *Burndown*
+<img src="https://github.com/criskurim/CodeYCode/blob/main/Sprints/3ªSprint/Burndown.png" width="800px">
