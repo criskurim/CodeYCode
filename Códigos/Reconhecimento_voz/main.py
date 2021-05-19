@@ -157,17 +157,70 @@ while ouvindo:
 
                 horario = str(input('Horario (hh:mm): '))
 
-                bet_pergunta = ("Fale o nome do primeiro time que irá jogar:  ")
-                print(bet_pergunta)
-                sintese_voz(bet_pergunta)
+                while True:
+                    bet_pergunta = ("Fale o nome do primeiro time que irá jogar:  ")
+                    print(bet_pergunta)
+                    sintese_voz(bet_pergunta)
+                    time1 = ouvir_microfone()
 
-                time1 = ouvir_microfone()
+                    if(time1=='Não entendi!'):
+                        continue
+                    else:
+                        while True:
+                            bet_pergunta = (f"Você falou {time1}?  ")
+                            print(bet_pergunta)
+                            sintese_voz(bet_pergunta)
 
-                bet_pergunta = ("Fale o nome do segundo time que irá jogar:  ")
-                print(bet_pergunta)
-                sintese_voz(bet_pergunta)
+                            resposta_time1 = ouvir_microfone()
+                            if(encontrar_comando('sim', resposta_time1)):
+                                resposta_ok_time1_= True
+                                break
+                            elif (encontrar_comando('não', resposta_time1)):
+                                resposta_ok_time1_= False
+                                break
+                            else:
+                                bet_pergunta = ("Não entendi, tente novamente!")
+                                print(bet_pergunta)
+                                sintese_voz(bet_pergunta)
 
-                time2 = ouvir_microfone()
+                                continue
+                        if resposta_ok_time1_:
+                            break
+                        else:
+                            continue
+                    
+
+                while True:
+                    bet_pergunta = ("Fale o nome do segundo time que irá jogar:  ")
+                    print(bet_pergunta)
+                    sintese_voz(bet_pergunta)
+                    time2 = ouvir_microfone()
+
+                    if(time1=='Não entendi!'):
+                        continue
+                    else:
+                        while True:
+                            bet_pergunta = (f"Você falou {time2}?  ")
+                            print(bet_pergunta)
+                            sintese_voz(bet_pergunta)
+
+                            resposta_time2 = ouvir_microfone()
+                            if(encontrar_comando('sim', resposta_time2)):
+                                resposta_ok_time2_= True
+                                break
+                            elif (encontrar_comando('não', resposta_time2)):
+                                resposta_ok_time2_= False
+                                break
+                            else:
+                                bet_pergunta = ("Não entendi, tente novamente!")
+                                print(bet_pergunta)
+                                sintese_voz(bet_pergunta)
+
+                                continue
+                        if resposta_ok_time2_:
+                            break
+                        else:
+                            continue
 
                 print(f'{time1} x {time2}')
                 print(f'{data} --- {horario}')
@@ -201,6 +254,9 @@ while ouvindo:
                 
                 break
             else:
+                bet_pergunta = ("Não entendi, tente novamente!")
+                print(bet_pergunta)
+                sintese_voz(bet_pergunta)
                 continue
 
         #busca por notícias(globo esporte)
