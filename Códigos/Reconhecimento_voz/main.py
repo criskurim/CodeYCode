@@ -50,7 +50,7 @@ def consulta_time(time, list):
         return False
 # listas de clubes brasileiros para referência
 
-list_times = ['América-MG', 'Athletico-PR', 'Atlético-GO', 'Atlético-MG', 'Bahia', 'Bragantino', 'Ceará', 'Chapecoense', 'Corinthians', 'Cuiabá', 'Flamengo', 'Fluminense', 'Fortaleza', 'Grêmio', 'Internacional', 'Juventude', 'Palmeiras', 'Santos', 'São Paulo', 'Sport', 'Avaí', 'Botafogo', 'Brasil de Pelotas', 'Brusque', 'CRB', 'CSA', 'Confiança', 'Coritiba', 'Cruzeiro', 'Goiás', 'Guarani', 'Londrina', 'Náutico', 'Operário-PR', 'Ponte Preta', 'Remo', 'Sampaio Corrêa', 'Vasco', 'Vila Nova', 'Vitória']
+list_times = ['América mineiro', 'Athletico paranaense', 'Atlético goianiense', 'Atlético mineiro', 'Bahia', 'Bragantino', 'Ceará', 'Chapecoense', 'Corinthians', 'Cuiabá', 'Flamengo', 'Fluminense', 'Fortaleza', 'Grêmio', 'Internacional', 'Juventude', 'Palmeiras', 'Santos', 'São Paulo', 'Sport', 'Avaí', 'Botafogo', 'Brasil de Pelotas', 'Brusque', 'CRB', 'CSA', 'Confiança', 'Coritiba', 'Cruzeiro', 'Goiás', 'Guarani', 'Londrina', 'Náutico', 'Operário', 'Ponte Preta', 'Remo', 'Sampaio Corrêa', 'Vasco', 'Vila Nova', 'Vitória']
 
 # início do programa
 bet_inicio = "Olá, eu sou Bet, sua assistente virtual!"
@@ -204,7 +204,7 @@ while ouvindo:
                 continue
 
         #busca por notícias(globo esporte)
-    elif (encontrar_comando('notícias', frase)):
+    elif (encontrar_comando('notícia', frase)):
         busca_noticias = True
         while busca_noticias:
             bet_diz = 'Deseja receber notícias sobre qual time? '
@@ -213,6 +213,7 @@ while ouvindo:
             
             if consulta_time(time, list_times):
                 bet_diz = 'Você escolheu: ', time
+                sintese_voz(bet_diz)
                 site_noticias = f'https://globoesporte.globo.com/busca/?q={time}'
                 abrir_site(site_noticias)
                 busca_noticias = False
@@ -222,7 +223,7 @@ while ouvindo:
                 busca_noticias = True
         
         #busca por vídeos(youtube)
-    elif (encontrar_comando('vídeos', frase)):
+    elif (encontrar_comando('vídeo', frase)):
         
         busca_videos = True
         while busca_videos:
@@ -241,7 +242,7 @@ while ouvindo:
                 busca_videos = True
 
         #busca por memes (ole do brasil)
-    elif (encontrar_comando('memes', frase)):
+    elif (encontrar_comando('meme', frase)):
         busca_memes = True
         while busca_memes:
             bet_diz = 'Deseja visualizar memes sobre qual time? '
