@@ -5,6 +5,7 @@ from googlesearch import search
 import pyttsx3
 import webbrowser
 import agenda_c_bd
+import tabela_jogos
 
 #Declaração de funções a serem chamadas ao longo do programa
 
@@ -32,7 +33,7 @@ def sintese_voz(entrada_de_texto): #função para sintetizar voz
 
 def pesquisa_web(termo): #realiza a pesquisa em google.com e imprime os links
     list_sites_resultados = []
-    pesquisa = search(termo, num_results=3)
+    pesquisa = search(termo, num_results=3, lang="pt")
     for i in pesquisa:
         list_sites_resultados.append(i)
     return list_sites_resultados
@@ -315,6 +316,13 @@ while ouvindo:
                 sintese_voz(bet_avisa)
                 busca_memes = True
         
+        #imprime a tabela de jogos do dia atualizada
+    elif (encontrar_comando('jogos de hoje', frase)):
+        bet_diz = 'Estes são os jogos de hoje!'
+        sintese_voz(bet_diz)
+        print(tabela_jogos.tabela_jogos_hoje())
+        
+
         #ouve e imprime o que foi dito indefinidamente até que algum comando seja entendido
     else:                
         sintese_voz(frase)

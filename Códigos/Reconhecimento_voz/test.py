@@ -18,30 +18,45 @@ def data_atual():
     data_e_hora_em_texto = data_e_hora_atuais.strftime('%d/%m/%Y')
     return data_e_hora_em_texto
 
+def pesquisa_web(termo): #realiza a pesquisa em google.com e imprime os links
+    pesquisa = search(termo, num_results=3, lang="pt")
+    return pesquisa
+#data_hoje = data_atual()
+def ouvir_microfone(): #função para ouvir o microfone
+    microfone = sr.Recognizer()
+    with sr.Microphone() as source:
+        microfone.adjust_for_ambient_noise(source)
+        audio = microfone.listen(source)
+        try:
+            frase = microfone.recognize_google(audio, language='pt-BR')
+            return frase
+        except sr.UnknownValueError:
+            return "Não entendi!"
 
-data_hoje = data_atual()
+def encontrar_comando (comando, frase): #encontra a palavra chave em uma frase qualquer
+    if comando in frase:
+        return True
+    else:
+        return False
 
-#site = f'https://www.uol.com.br/esporte/futebol/central-de-jogos/#/{data_hoje}'
-#abrir_site(site)
+lista_sites_apostas = ['bet365', 'betway', '1XBet', 'rivalo']
+indices = ['primeiro', 'segundo', 'terceiro', 'quarto']
 
-############################################################################################################################
+indice = ouvir_microfone()
+print(indice)
 
-#query = input('Digite o produto que deseja pesquisar: ')
+for i in indices:
+    if (encontrar_comando(i, indice)):
+        if i == 'primeiro':
+            abrir_site(pesquisa_web(lista_sites_apostas[0])[0])
+        elif i == 'segundo':
+            abrir_site(pesquisa_web(lista_sites_apostas[1])[0])
+        elif i == 'terceiro':
+            abrir_site(pesquisa_web(lista_sites_apostas[2])[0])
+        elif i == 'quarto':
+            abrir_site(pesquisa_web(lista_sites_apostas[3])[0])
+    
 
-
-resposta = requests.get('https://www.goal.com/br/not%C3%ADcias/programacao-partidas-futebol-tv-aberta-fechada-onde-assistir/1jf3cuk3yh5uz18j0s89y5od6w')
-
-lista_jogos = []
-
-content = resposta.content
-
-site = BeautifulSoup(content, 'html.parser')
-tabela_jogos = site.find('table', attrs={'class': 'tableizer-table'})
-jogos = tabela_jogos.findAll('tr')
-for jogo in jogos:
-    print(jogo.text)
-
-#print(site_html)
 
 
 
