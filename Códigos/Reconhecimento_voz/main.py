@@ -6,6 +6,9 @@ import pyttsx3
 import webbrowser
 import agenda_c_bd
 import tabela_jogos
+import tela
+
+
 
 #Declaração de funções a serem chamadas ao longo do programa
 
@@ -55,10 +58,9 @@ list_times = ['América mineiro', 'Athletico paranaense', 'Atlético goianiense'
 
 # início do programa
 bet_inicio = "Olá, eu sou Bet, sua assistente virtual!"
-
 print(bet_inicio)
 sintese_voz(bet_inicio)
-
+agenda_c_bd.lembrete_jogo()
 #loop para ouvir continuamente
 ouvindo = True
 
@@ -120,11 +122,7 @@ while ouvindo:
                     pesquisando = False
             else:
                 sintese_voz('Não entendi, tente novamente!')
-                pesquisando = True
-
-    elif encontrar_comando('obrigado', frase):       #comando de voz que encerra o programa
-        ouvindo = False
-    
+                pesquisando = True  
 
     #Agenda
     elif encontrar_comando('agenda', frase):
@@ -321,7 +319,44 @@ while ouvindo:
         bet_diz = 'Estes são os jogos de hoje!'
         sintese_voz(bet_diz)
         print(tabela_jogos.tabela_jogos_hoje())
+    
+    elif (encontrar_comando('aposta', frase)):
+        lista_sites_apostas = ['bet365', 'betway', '1XBet', 'rivalo']
+        indices = ['primeiro', 'segundo', 'terceiro', 'quarto']
+        bet_diz = "Estes são os sites de apostas espostivas disponíveis! "
+        print(bet_diz)
+        sintese_voz(bet_diz)
+        for titulo_site in lista_sites_apostas:
+                print (titulo_site)
+        abrir_site_aposta = True
+        while abrir_site_aposta:
+            bet_pergunta = "Deseja abrir algum destes sites?"
+            sintese_voz(bet_pergunta)
+            comando = ouvir_microfone()
+            if comando == 'sim':
+                bet_pergunta = "Qual destes sites deseja abrir?"
+                sintese_voz(bet_pergunta)
+                indice = ouvir_microfone()
+                for i in indices:
+                    if (encontrar_comando(i, indice)):
+                        if i == 'primeiro':
+                            abrir_site(pesquisa_web(lista_sites_apostas[0])[0])
+                        elif i == 'segundo':
+                            abrir_site(pesquisa_web(lista_sites_apostas[1])[0])
+                        elif i == 'terceiro':
+                            abrir_site(pesquisa_web(lista_sites_apostas[2])[0])
+                        elif i == 'quarto':
+                            abrir_site(pesquisa_web(lista_sites_apostas[3])[0])
+                        abrir_site_aposta = False
+            elif comando == 'não':
+                abrir_site_aposta = False
+            else:
+                bet_avisa = "Não entendi! Tente novamente, por favor!"
+                sintese_voz(bet_avisa)
+                abrir_site_aposta = True
         
+    elif encontrar_comando('obrigado', frase):       #comando de voz que encerra o programa
+        ouvindo = False
 
         #ouve e imprime o que foi dito indefinidamente até que algum comando seja entendido
     else:                

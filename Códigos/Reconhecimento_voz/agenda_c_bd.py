@@ -1,4 +1,6 @@
+import pyttsx3
 import sqlite3
+from datetime import datetime
 
 def exibir_agenda():
     banco = sqlite3.connect('teste_agenda.db')
@@ -20,6 +22,7 @@ def inserir_na_agenda(time1, time2, data, horario):
     except sqlite3.Error as erro:
         print(f'Erro ao inserir: {erro}')
     print()
+
 def deletar_na_agenda(id):
     try:
         banco = sqlite3.connect('teste_agenda.db')
@@ -31,8 +34,8 @@ def deletar_na_agenda(id):
 
     except sqlite3.Error as erro:
         print(f'Erro ao excluir: {erro}')
-
     print()
+
 def atualizar_na_agenda(time, data):
     banco = sqlite3.connect('teste_agenda.db')
     cursor = banco.cursor()
@@ -41,6 +44,32 @@ def atualizar_na_agenda(time, data):
     banco.close()
     print("Dados atualizados com sucesso")
     print()
+
+def data_atual():
+    data_e_hora_atuais = datetime.now()
+    data_e_hora_em_texto = data_e_hora_atuais.strftime('%d/%m/%Y')
+    return data_e_hora_em_texto
+
+def sintese_voz(entrada_de_texto): #função para sintetizar voz
+    falar = pyttsx3.init('sapi5')
+    falar.say(entrada_de_texto)
+    falar.runAndWait()
+
+def lembrete_jogo():
+    banco = sqlite3.connect('teste_agenda.db')
+    cursor = banco.cursor()
+    cursor.execute("SELECT* FROM jogos2 WHERE data='"+data_atual()+"'")
+    jogos = 0
+    for jogo in cursor:
+        jogos += 1
+        print(jogo)
+    if jogos == 0:
+        bet_avisa = "Nenhum jogo da sua agenda acontecendo hoje!"
+        sintese_voz(bet_avisa)
+    else:
+        bet_avisa = "Lembrete! Estes jogos que você armazenou na sua agenda acontecem hoje!" 
+        sintese_voz(bet_avisa)
+    banco.close()
 
 
 #Criar Tabela

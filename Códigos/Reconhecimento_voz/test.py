@@ -3,12 +3,13 @@ import speech_recognition as sr
 from googlesearch import search
 import pyttsx3
 import webbrowser
-
+import sqlite3
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import openpyxl
 import selenium
+import agenda_c_bd
 
 def abrir_site(site):
     webbrowser.open(site, new=0, autoraise=True)
@@ -39,24 +40,42 @@ def encontrar_comando (comando, frase): #encontra a palavra chave em uma frase q
     else:
         return False
 
-lista_sites_apostas = ['bet365', 'betway', '1XBet', 'rivalo']
-indices = ['primeiro', 'segundo', 'terceiro', 'quarto']
+def sintese_voz(entrada_de_texto): #função para sintetizar voz
+    falar = pyttsx3.init('sapi5')
+    falar.say(entrada_de_texto)
+    falar.runAndWait()
 
-indice = ouvir_microfone()
-print(indice)
 
-for i in indices:
-    if (encontrar_comando(i, indice)):
-        if i == 'primeiro':
-            abrir_site(pesquisa_web(lista_sites_apostas[0])[0])
-        elif i == 'segundo':
-            abrir_site(pesquisa_web(lista_sites_apostas[1])[0])
-        elif i == 'terceiro':
-            abrir_site(pesquisa_web(lista_sites_apostas[2])[0])
-        elif i == 'quarto':
-            abrir_site(pesquisa_web(lista_sites_apostas[3])[0])
-    
 
+
+def comparar_data(data):
+    if data == data_atual():
+        return True
+    else:
+        return False
+
+
+
+def lembrete_jogo():
+    banco = sqlite3.connect('teste_agenda.db')
+    cursor = banco.cursor()
+    cursor.execute("SELECT* FROM jogos2 WHERE data='"+data_atual()+"'")
+    jogos = 0
+    for i in cursor:
+        jogos += 1
+        print(i)
+    if jogos == 0:
+        print('Nenhum jogo da sua agenda acontecendo hoje!')
+    else:
+        print("Estes são os jogos que acontecem hoje!")
+        
+    banco.close()
+
+
+#agenda_c_bd.exibir_agenda()
+
+#print(comparar_data('26/05/2021'))
+lembrete_jogo()
 
 
 
