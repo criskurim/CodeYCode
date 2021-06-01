@@ -235,10 +235,26 @@ while aguardando_comando:
             
             #abre sites de apostas predefinidos
             elif func.encontrar_comando('aposta', frase):
-                #lista_sites_apostas = ['bet365', 'betway', '1XBet', 'rivalo']
-                #indices = ['primeiro', 'segundo', 'terceiro', 'quarto']
-                func.sintese_voz("Estes são os sites de apostas espostivas disponíveis! ")
-                for titulo_site in func.lista_sites_apostas:
+                func.sintese_voz("Aqui está um site de apostas espostivas!")
+                abrindo_site_apostas = True
+                i = 0
+                while abrindo_site_apostas:
+                    func.abrir_site(func.pesquisa_web(func.lista_sites_apostas[i])[0])
+                    explorando = True
+                    while explorando:
+                        func.sintese_voz('Deseja abrir outro site de apostas esportivas?')
+                        resposta = func.ouvir_microfone()
+                        i += 1
+                        if func.encontrar_comando('sim', resposta):
+                            func.abrir_site(func.pesquisa_web(func.lista_sites_apostas[i])[0])
+                            explorando = True
+                        elif func.encontrar_comando('não', resposta):
+                            explorando = False
+                            abrindo_site_apostas = False
+                        else:
+                            func.sintese_voz('Não entendi, tente novamente!')
+                            abrindo_sites = True
+                """ for titulo_site in func.lista_sites_apostas:
                     print(titulo_site)
                     abrir_site_aposta = True
                     while abrir_site_aposta:
@@ -262,7 +278,7 @@ while aguardando_comando:
                             abrir_site_aposta = False
                         else:
                             func.sintese_voz("Não entendi! Tente novamente, por favor!")
-                            abrir_site_aposta = True
+                            abrir_site_aposta = True """
                 ouvindo = True
 
             #comando de voz que encerra o programa    

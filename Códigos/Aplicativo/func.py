@@ -146,7 +146,6 @@ def exibir_agenda():
     cursor.execute("SELECT id,time1, time2, data, horario data from jogos2 ")
     jogos = 0
     for jogo in cursor:
-        print(jogo)
         jogos += 1
         time_1 = jogo[1]
         time_2 = jogo[2]
