@@ -66,10 +66,13 @@ def lembrete_jogo():
     if jogos == 0:
         bet_avisa = "Nenhum jogo da sua agenda acontecendo hoje!"
         sintese_voz(bet_avisa)
+        return bet_avisa
     else:
         bet_avisa = "Lembrete! Estes jogos que você armazenou na sua agenda acontecem hoje!" 
         sintese_voz(bet_avisa)
+        return bet_avisa
     banco.close()
+    
 
 
 #Criar Tabela
@@ -110,3 +113,4 @@ def lembrete_jogo():
 #deletar_na_agenda(time)
 # inserir_na_agenda("cruzeiro", "12/07/2021")
 #exibir_agenda()
+
