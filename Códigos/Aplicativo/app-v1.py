@@ -6,6 +6,8 @@ import func
 # início do programa
 func.sintese_voz("Olá, eu sou Bet, sua assistente virtual!")
 func.lembrete_jogo()
+data_ontem = func.data_ontem()
+func.limpa_agenda_automaticamente(data_ontem)
 aguardando_comando = True
 
 while aguardando_comando:
@@ -143,11 +145,138 @@ while aguardando_comando:
                                     salvando = True
                             inserindo = False
                             usando_agenda = False
-                    elif func.encontrar_comando('deletar', termo_busca):
-                        func.sintese_voz("Digite o código do jogo para deletar?")
-                        cod_deletar = str(input('Código: '))
-                        func.deletar_na_agenda(cod_deletar) 
-                        break
+                    
+                    elif func.encontrar_comando('atualizar', termo_busca):
+                        func.sintese_voz('Por favor, quais os dados do jogo que deseja atualizar?')
+                        atualizando = True
+                        while atualizando:
+                            inserindo_dia = True
+                            inserindo_mes = True
+                            inserindo_ano = True
+                            inserindo_horario = True
+                            inserindo_time1 = True
+                            inserindo_time2 = True
+                            salvando = True
+                            while inserindo_time1:
+                                func.sintese_voz('Qual o nome do primeiro time?')
+                                time_falado = func.ouvir_microfone()
+                                if func.consulta_time(time_falado):
+                                    time_1 = time_falado
+                                    func.sintese_voz('Time armazenado!')
+                                    inserindo_time1 = False
+                                else:
+                                    func.sintese_voz('Poderia repetir, eu não entendi!')
+                                    inserindo_time1 = True
+                            while inserindo_time2:
+                                func.sintese_voz('Qual o nome do segundo time?')
+                                time_falado = func.ouvir_microfone()
+                                if func.consulta_time(time_falado):
+                                    time_2 = time_falado
+                                    func.sintese_voz('Time armazenado!')
+                                    inserindo_time2 = False
+                                else:
+                                    func.sintese_voz= ('Poderia repetir, eu não entendi!')
+                                    inserindo_time2 = True
+                            while inserindo_dia:
+                                func.sintese_voz("Que o novo dia em que acontecerá o jogo?")
+                                dia_falado = func.ouvir_microfone()
+                                if func.consulta_dia(dia_falado):
+                                    dia = dia_falado
+                                    func.sintese_voz('Dia armazenado!')
+                                    inserindo_dia = False
+                                else:
+                                    func.sintese_voz('Poderia repetir, eu não entendi!')
+                                    inserindo_dia = True
+                            while inserindo_mes:
+                                func.sintese_voz("Em que mês acontecerá o jogo?")
+                                mes_falado = func.ouvir_microfone()
+                                if func.consulta_meses(mes_falado.lower()):
+                                    mes = mes_falado.lower()
+                                    func.sintese_voz('Mês armazenado!')
+                                    inserindo_mes = False
+                                else:
+                                    func.sintese_voz('Poderia repetir, eu não entendi!')
+                                    inserindo_mes = True
+                            while inserindo_ano:
+                                func.sintese_voz("Em que ano acontecerá o jogo?")
+                                ano_falado = func.ouvir_microfone()
+                                if func.consulta_ano(ano_falado):
+                                    ano = ano_falado
+                                    func.sintese_voz('Ano armazenado!')
+                                    inserindo_ano = False
+                                else:
+                                    func.sintese_voz('Poderia repetir, eu não entendi!')
+                                    inserindo_ano = True
+                            data_inserida = func.gerar_data(dia, mes, ano)                     
+                            while inserindo_horario:
+                                func.sintese_voz("Qual o horario do jogo? ")
+                                horario_falado = func.ouvir_microfone()
+                                if horario_falado != 'Não entendi!':
+                                    horario = horario_falado
+                                    func.sintese_voz('Horário armazenado!')
+                                    inserindo_horario = False
+                                else:
+                                    sintese_voz= ('Poderia repetir, eu não entendi!')
+                                    inserindo_horario = True
+                            while salvando:   
+                                func.sintese_voz(f'Você deseja atualizar os dados do jogo entre {time_1} e {time_2} para: dia {data_inserida} às {horario}?')
+                                resposta = func.ouvir_microfone()
+                                if(func.encontrar_comando('sim', resposta)):
+                                    func.atualizar_na_agenda(time_1, time_2, data_inserida, horario)
+                                    func.sintese_voz('Dados do Jogo atualizados!')
+                                    salvando = False
+                                elif(func.encontrar_comando('não', resposta)):
+                                    func.sintese_voz("Alteração descartada!")
+                                    salvando = False
+                                else:
+                                    func.sintese_voz("Não entendi, tente novamente!")
+                                    salvando = True
+                            atualizando = False
+                            usando_agenda = False
+
+                    elif func.encontrar_comando('apagar', termo_busca):
+                        func.sintese_voz("Diga os nomes dos clubes do jogo que deseja apagar na sua agenda!")
+                        deletando = True
+                        while deletando:
+                            inserindo_time1 = True
+                            inserindo_time2 = True
+                            apagando = True
+                            while inserindo_time1:
+                                func.sintese_voz('Qual o nome do primeiro time?')
+                                time_falado = func.ouvir_microfone()
+                                if func.consulta_time(time_falado):
+                                    del_time_1 = time_falado
+                                    func.sintese_voz('Time armazenado!')
+                                    inserindo_time1 = False
+                                else:
+                                    func.sintese_voz('Poderia repetir, eu não entendi!')
+                                    inserindo_time1 = True
+                            while inserindo_time2:
+                                func.sintese_voz('Qual o nome do segundo time?')
+                                time_falado = func.ouvir_microfone()
+                                if func.consulta_time(time_falado):
+                                    del_time_2 = time_falado
+                                    func.sintese_voz('Time armazenado!')
+                                    inserindo_time2 = False
+                                else:
+                                    func.sintese_voz= ('Poderia repetir, eu não entendi!')
+                                    inserindo_time2 = True
+                            while apagando:   
+                                func.sintese_voz(f'Deseja realmente apagar o jogo entre {del_time_1} e {del_time_2} da sua agenda?')
+                                resposta = func.ouvir_microfone()
+                                if(func.encontrar_comando('sim', resposta)):
+                                    func.deletar_na_agenda(del_time_1, del_time_2)
+                                    func.sintese_voz('Jogo apagado da sua agenda!')
+                                    apagando = False
+                                elif(func.encontrar_comando('não', resposta)):
+                                    func.sintese_voz("Operação cancelada!")
+                                    apagando = False
+                                else:
+                                    func.sintese_voz("Não entendi, tente novamente!")
+                                    apagando = True
+                            deletando = False
+                            usando_agenda = False
+
                     elif func.encontrar_comando('nada', termo_busca):
                         usando_agenda = False
                     else:

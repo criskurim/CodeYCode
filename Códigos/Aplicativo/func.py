@@ -5,6 +5,7 @@ import pyttsx3
 import webbrowser
 import sqlite3
 from datetime import datetime
+import datetime
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -12,7 +13,7 @@ import pandas as pd
 
 #listas de suporte
 lista_comandos = ['bete', 'beth', 'bet', 'Bete', 'Beth', 'Bet']
-list_times = ['América mineiro', 'Athletico paranaense', 'Atlético goianiense', 'Atlético mineiro', 'Bahia', 'Bragantino', 'Ceará', 'Chapecoense', 'Corinthians', 'Cuiabá', 'Flamengo', 'Fluminense', 'Fortaleza', 'Grêmio', 'Internacional', 'Juventude', 'Palmeiras', 'Santos', 'São Paulo', 'Sport', 'Avaí', 'Botafogo', 'Brasil de Pelotas', 'Brusque', 'CRB', 'CSA', 'Confiança', 'Coritiba', 'Cruzeiro', 'Goiás', 'Guarani', 'Londrina', 'Náutico', 'Operário', 'Ponte Preta', 'Remo', 'Sampaio Corrêa', 'Vasco', 'Vila Nova', 'Vitória']
+list_times = ['América Mineiro', 'Athletico Paranaense', 'Atlético Goianiense', 'Atlético Mineiro', 'Bahia', 'Bragantino', 'Ceará', 'Chapecoense', 'Corinthians', 'Cuiabá', 'Flamengo', 'Fluminense', 'Fortaleza', 'Grêmio', 'Internacional', 'Juventude', 'Palmeiras', 'Santos', 'São Paulo', 'Sport', 'Avaí', 'Botafogo', 'Brasil de Pelotas', 'Brusque', 'CRB', 'CSA', 'Confiança', 'Coritiba', 'Cruzeiro', 'Goiás', 'Guarani', 'Londrina', 'Náutico', 'Operário', 'Ponte Preta', 'Remo', 'Sampaio Corrêa', 'Vasco', 'Vila Nova', 'Vitória']
 lista_sites_apostas = ['bet365', 'betway', '1XBet', 'rivalo']
 indices = ['primeiro', 'segundo', 'terceiro', 'quarto']
 list_meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
@@ -44,7 +45,7 @@ def sintese_voz(entrada_de_texto): #função para sintetizar voz
 
 def pesquisa_web(termo): #realiza a pesquisa em google.com e imprime os links
     list_sites_resultados = []
-    pesquisa = search(termo, num_results=3, lang="pt")
+    pesquisa = search(termo, num_results=10, lang="pt")
     for i in pesquisa:
         list_sites_resultados.append(i)
     return list_sites_resultados
@@ -99,16 +100,22 @@ def lembrete_jogo():
         time_1 = jogo[1]
         time_2 = jogo[2]
         horario = jogo[4]
-        sintese_voz(f'Lembrete! {time_1} e {time_2} jogam hoje às {horario}')
+        sintese_voz(f'{time_1} e {time_2} jogam hoje às {horario}')
     if jogos == 0:
         sintese_voz("Nenhum jogo da sua agenda acontecendo hoje!")
     banco.close()
 
 def data_atual():
-    data_atual = datetime.now()
+    data_atual = datetime.datetime.now()
     #data_e_hora_em_texto = data_e_hora_atuais.strftime('%d/%m/%Y')
     data_em_texto = '{}/{}/{}'.format(data_atual.day, data_atual.month, data_atual.year)
     return data_em_texto
+
+def data_ontem():
+    data_atual = datetime.datetime.now()
+    data_ontem = data_atual - datetime.timedelta(days=1)
+    data_texto = '{}/{}/{}'.format(data_ontem.day, data_ontem.month, data_ontem.year)
+    return data_texto
 
 def tabela_jogos_hoje():
 
@@ -146,6 +153,7 @@ def exibir_agenda():
     cursor.execute("SELECT id,time1, time2, data, horario data from jogos2 ")
     jogos = 0
     for jogo in cursor:
+        #print(jogo)
         jogos += 1
         time_1 = jogo[1]
         time_2 = jogo[2]
@@ -163,31 +171,42 @@ def inserir_na_agenda(time1, time2, data, horario):
         cursor.execute("INSERT INTO jogos2(time1, time2, data, horario) VALUES('"+time1+"', '"+time2+"', '"+data+"', '"+horario+"')")
         banco.commit()
         banco.close()
-        print("Agenda atualizada")
+        #print("Agenda atualizada")
 
     except sqlite3.Error as erro:
         print(f'Erro ao inserir: {erro}')
-    print()
 
-def deletar_na_agenda(id):
+def deletar_na_agenda(time1, time2):
     try:
         banco = sqlite3.connect('teste_agenda.db')
         cursor = banco.cursor()
-        cursor.execute("DELETE FROM jogos2 WHERE id = '"+id+"'")
+        cursor.execute("DELETE FROM jogos2 WHERE time1 = '"+time1+"' and time2 = '"+time2+"'")
         banco.commit()
         banco.close()
-        print("Dados apagados com sucesso!")
+        #print("Dados apagados com sucesso!")
 
     except sqlite3.Error as erro:
         print(f'Erro ao excluir: {erro}')
-    print()
 
-def atualizar_na_agenda(time, data):
+def limpa_agenda_automaticamente(data_ontem):
+    
+    try:
+        banco = sqlite3.connect('teste_agenda.db')
+        cursor = banco.cursor()
+        cursor.execute("DELETE FROM jogos2 WHERE data = '"+data_ontem+"'")
+        banco.commit()
+        banco.close()
+        #print("Dados apagados com sucesso!")
+
+    except sqlite3.Error as erro:
+        print(f'Erro ao excluir: {erro}')
+
+def atualizar_na_agenda(time1, time2, data, horario):
     banco = sqlite3.connect('teste_agenda.db')
     cursor = banco.cursor()
-    cursor.execute("UPDATE agenda1 SET data = '"+data+"' WHERE time = '"+time+"'")
+    cursor.execute("UPDATE jogos2 SET data = '"+data+"', horario = '"+horario+"' WHERE time1 = '"+time1+"' and time2 = '"+time2+"'")
     banco.commit()
     banco.close()
-    print("Dados atualizados com sucesso")
-    print()
+    #print("Dados atualizados com sucesso")
+
 
