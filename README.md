@@ -38,7 +38,8 @@ Desenvolvido para ser uma assistente virtual de Esporte, com o meio de facilitar
 
 ----
 
-### 📱 Funcionalidades
+### 📱 Funcionalidades do Programa
+
 - **Noticias:** <br>
 Novidades sobre o time do coração ou sobre o esporte. <br>
 
