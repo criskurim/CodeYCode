@@ -16,25 +16,17 @@ Desenvolvido para ser uma assistente virtual de Esporte, com o meio de facilitar
 
 ----
 
-## Vídeo de intrudução ao Projeto IBET
-[![Introdução ao IBET ](http://img.youtube.com/vi/tCxHMiyCjjk/0.jpg)](http://www.youtube.com/watch?v=tCxHMiyCjjk "Vídeo de Intrudução ao Projeto")
+## 🧩Backlog do Produto
+<img src='https://github.com/criskurim/CodeYCode/blob/main/Sprints/Backlog.png' width='500'>
 
 ----
 
-### 📅 Informações das Sprints
+### 📅 Informações das Sprints:
+*Veja cada uma de nossas sprints para mais informações sobre o conteúdo do projeto ao longo das entregas do semestre.*
 - ### [*Sprint 1*](https://github.com/criskurim/CodeYCode/tree/main/Sprints/1ª%20Sprint) - 08/03/2021 a 28/03/2021 (Finalizado)
 - ### [*Sprint 2*](https://github.com/criskurim/CodeYCode/tree/main/Sprints/2ª%20Sprint) - 29/03/2021 a 18/04/2021 (Finalizado)
 - ### [*Sprint 3*](https://github.com/criskurim/CodeYCode/tree/main/Sprints/3ªSprint) - 26/04/2021 a 16/05/2021 (Finalizado)
 - ### [*Sprint 4*](https://github.com/criskurim/CodeYCode/tree/main/Sprints/4ª%20Sprint) - 17/05/2021 a 05/06/2021 (Finalizado)
-
-----
-
-### 🔔  Requisitos Necessários
- - Responder a comando de voz ou sons específicos;
- - Possuir no mínimo 8 e ações distintas e de natureza distintas;
- - Ser mobile, web ou desktop;
- - Retornar o comando em qualquer forma (Som, texto ou ação);
- - Ter um contexto específico de aplicação.
 
 ----
 
@@ -55,17 +47,11 @@ Mostrar os horários do jogos e a possíbilidade de criar um lembrete. <br>
 - **Informações da Equipe:** <br>
 Visualizar informações da equipe (contratação, substituição). <br>
 
-- **Indicações de Filmes e Documentários:** <br>
-Filmes e Documentários épicos sobre esporte. <br>
-
 - **Informações sobre o Esporte:** <br>
 Informações sobre o esporte para descobrir regras e campeonatos. <br>
 
 - **Memes (Tirininhas engraçadas):** <br>
 Compartilhamento de tirinhas engraçadas criadas pelos fãs. <br>
-
-- **Tabela de pontuação do campeonato:** <br>
-Informa todos os campeonatos atuais. <br>
 
 - **Jogos:** <br>
 Mostra os jogos de esporte do momento. <br>
@@ -85,9 +71,20 @@ Agendar o dia da partida tão esperada do time. <br>
 
 ✔️ [**Python**](https://www.python.org)
 
+✔️ [**PyCharm**](https://www.jetbrains.com/pt-br/pycharm/)
+
 ✔️ [**Visual Studio Code**](https://code.visualstudio.com/)
 
 ✔️ [**Google Drive**](https://www.google.com/intl/pt-br/drive/about.html)
+
+### Bibliotecas Utilizadas:
+
+✔️ **PyAudio**
+✔️ **Speech Recognition**
+✔️ **Pyttsx3**
+✔️ **sqlite3**
+✔️ **Pandas**
+✔️ **Web Browser**
 
 ----
 
