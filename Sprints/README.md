@@ -1,4 +1,4 @@
-## Mais informações sobre cada Sprints
+## Mais informações sobre o que foi feito em cada Sprints:
 
 - ### [*Sprint 1*](https://github.com/criskurim/CodeYCode/tree/main/Sprints/1ª%20Sprint) - 08/03/2021 a 28/03/2021 (Finalizado)
  
