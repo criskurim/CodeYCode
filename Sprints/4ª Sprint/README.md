@@ -6,7 +6,7 @@
 
 ### *Backlog*:
 - Função de busca e retorno de página sobre os esportes
-- Função de busca e retorno de placar do jogo (Ao vivo)
+- Função de busca e retorno de Jogos do dia (Ao vivo)
 - Função de busca e retorno de busca de noticias
 - Função de busca e retorno de busca de memes
 - Burndown
