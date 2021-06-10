@@ -35,8 +35,8 @@ Desenvolvido para ser uma assistente virtual de Esporte, com o meio de facilitar
 - **Noticias:** <br>
 Novidades sobre o time do coração ou sobre o esporte. <br>
 
-- **Ao Vivo:** <br>
-Consultar o placar placar do jogo, quando é impossível de assiti-lo. <br>
+- **Compra:** <br>
+Consultar os uniformes disponíveis para comprar do seu time favorito. <br>
 
 - **Vídeos:** <br>
 Rever as jogadas das partidas, comentários do jogo (Youtube). <br>
